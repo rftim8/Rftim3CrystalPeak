@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Rftim3WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Rftim3WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

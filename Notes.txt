@@ -1,0 +1,18 @@
+trek
+generator
+operator
+reporter
+switch
+map
+inventory
+
+
+winforms - maui - wpf
+blazor - js, ts
+tsql - efcore
+
+
+threads - cross: openfiledialog, listbox, printdialog
+
+
+

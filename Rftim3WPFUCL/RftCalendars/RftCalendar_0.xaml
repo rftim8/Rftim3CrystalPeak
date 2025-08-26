@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="Rftim3WPFUCL.RftCalendars.RftCalendar_0"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Rftim3WPFUCL.RftCalendars"
+             mc:Ignorable="d">
+
+    <DockPanel Background="{DynamicResource RftBrushBackgroundWindow}">
+        <Label DockPanel.Dock="Top"
+               Height="50"
+               FontSize="25"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Foreground="{DynamicResource RftBrushForegroundWindow}">
+            Calendars
+        </Label>
+
+        <Grid>
+            <Calendar>
+
+            </Calendar>
+
+            <Grid RenderTransformOrigin="0.5 0.5">
+                <Grid.RenderTransform>
+                    <RotateTransform Angle="90"/>
+                </Grid.RenderTransform>
+
+                <Line x:Name="RftLineHour" 
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" 
+                      Stroke="{DynamicResource RftBrushForegroundWindow}" 
+                      StrokeThickness="1" 
+                      X1="0" 
+                      X2="-75"/>
+
+                <Line x:Name="RftLineMinute" 
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" 
+                      Stroke="{DynamicResource RftBrushForegroundWindow}" 
+                      StrokeThickness="1" 
+                      X1="0" 
+                      X2="-100"/>
+
+                <Line x:Name="RftLineSecond" 
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" 
+                      Stroke="Red" 
+                      StrokeThickness="1" 
+                      X1="0" 
+                      X2="-100"/>
+
+                <Ellipse Stroke="{DynamicResource RftBrushForegroundWindow}" 
+                         StrokeThickness="1" 
+                         Width="5" 
+                         Height="5" 
+                         Fill="{DynamicResource RftBrushForegroundWindow}" 
+                         VerticalAlignment="Center" 
+                         HorizontalAlignment="Center"/>
+
+                <Ellipse Stroke="{DynamicResource RftBrushForegroundWindow}" 
+                         StrokeThickness="1" 
+                         Width="210" 
+                         Height="210" 
+                         VerticalAlignment="Center" 
+                         HorizontalAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</UserControl>

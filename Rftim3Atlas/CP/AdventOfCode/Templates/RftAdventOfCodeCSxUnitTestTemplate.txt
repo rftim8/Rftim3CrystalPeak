@@ -1,0 +1,47 @@
+﻿using RftAPI.Services.Static.CP.AdventOfCode.Data;
+using RftCP.AdventOfCode;
+
+namespace RftCSxUnit.UnitTests.CP.AdventOfCode
+{
+    public class [x]_Test
+    {
+        // Arrange
+        private static readonly List<string> Input = RftAdventOfCodeStaticData.Input_Test(problemName: nameof([x]))!;
+        private static readonly int ExpectedPartOne = int.Parse(RftAdventOfCodeStaticData.Output_Test(problemName: nameof([x]))![0]);
+        private static readonly int ExpectedPartTwo = int.Parse(RftAdventOfCodeStaticData.Output_Test(problemName: nameof([x]))![1]);
+
+        public static TheoryData<List<string>, int> [x]PartOne_Data =>
+            new()
+            {
+                { Input, ExpectedPartOne }
+            };
+
+        public static TheoryData<List<string>, int> [x]PartTwo_Data =>
+            new()
+            {
+                { Input, ExpectedPartTwo }
+            };
+
+        [Theory]
+        [MemberData(nameof([x]PartOne_Data))]
+        public void RftPartOne(List<string> a0, int expected)
+        {
+            // Act
+            int actual = [x].PartOne_Test(a0);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [MemberData(nameof([x]PartTwo_Data))]
+        public void RftPartTwo(List<string> a0, int expected)
+        {
+            // Act
+            int actual = [x].PartTwo_Test(a0);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+    }
+}

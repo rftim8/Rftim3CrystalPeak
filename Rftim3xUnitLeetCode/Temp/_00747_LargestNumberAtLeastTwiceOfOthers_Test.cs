@@ -1,0 +1,27 @@
+namespace Rftim3xUnitLeetCode.Temp
+{
+    public class _00747_LargestNumberAtLeastTwiceOfOthers_Test
+    {
+        // Arrange
+        private static readonly int[] a0 = [];
+        private static readonly int ar = 0;
+
+        public static TheoryData<int[], int> _00747_LargestNumberAtLeastTwiceOfOthers_Data =>
+            new()
+            {
+                { a0, ar }
+            };
+
+
+        [Theory]
+        [MemberData(nameof(_00747_LargestNumberAtLeastTwiceOfOthers_Data))]
+        public void LargestNumberAtLeastTwiceOfOthers0(int[] a0, int expected)
+        {
+            // Act
+            //int actual = _00747_LargestNumberAtLeastTwiceOfOthers.LargestNumberAtLeastTwiceOfOthers0(a0);
+
+            // Assert
+            //Assert.Equal(expected, actual);
+        }
+    }
+}

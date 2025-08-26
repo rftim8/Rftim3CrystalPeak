@@ -1,0 +1,7 @@
+﻿namespace RftCP.AdventOfCode
+{
+    public interface I[x]
+    {
+        public void PrintSolution();
+    }
+}

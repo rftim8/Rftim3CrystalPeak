@@ -1,0 +1,34 @@
+﻿using System.Windows;
+
+namespace Rftim3Editor.GameProject
+{
+    public partial class ProjectBrowserDialog : Window
+    {
+        public ProjectBrowserDialog()
+        {
+            InitializeComponent();
+        }
+
+        private void OnToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == openProjectButton)
+            {
+                if (createProjectButton.IsChecked == true)
+                {
+                    createProjectButton.IsChecked = false;
+                    BrowserContent.Margin = new Thickness(0);
+                }
+                openProjectButton.IsChecked = true;
+            }
+            else
+            {
+                if (openProjectButton.IsChecked == true)
+                {
+                    openProjectButton.IsChecked = false;
+                    BrowserContent.Margin = new Thickness(-800, 0, 0, 0);
+                }
+                createProjectButton.IsChecked = true;
+            }
+        }
+    }
+}

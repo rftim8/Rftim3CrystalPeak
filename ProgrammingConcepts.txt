@@ -1,0 +1,172 @@
+Principles:
+    0.SOLID:
+        -Single Responsability
+        -Open/Closed
+        -Liskov's Substitution
+        -Interface Segregation
+        -Dependency Inversion
+        
+    1.DRY:
+        Don't Repeat Yourself
+        
+    2.SoC:
+        Separation Of Concerns
+        
+    3.Law of Demeter
+
+    4.ACID:
+        - atomicity
+        - consistency
+        - isolation
+        - durability
+
+
+        
+Patterns:
+    0.Creational:
+        -Abstract Factory
+        -Builder
+        -Prototype
+        -Singleton
+        
+    1.Structural:
+        -Adapter
+        -Bridge
+        -Facade
+        -Flyweight
+        -Proxy
+        
+    2.Behavioral:
+        -Chain Of Responsability
+        -Iterator
+        -Mediator
+        -Observer
+        -State
+        -Strategy
+        -Template Method
+        -Visitor
+
+    3.CQRS:
+        - command 
+        - query 
+        - responsibility 
+        - segregation
+
+
+        
+poco - plain old class object
+ddd - domain driven design
+tdd - test driven development
+dto - data transfer object
+oop - object oriented programming
+
+services / commands
+efcore - orm (object relational mapper)
+lazy / eager loading
+aggregates / auto include() vs lazy loading
+locks
+
+mcp - model context protocol
+
+TDD:
+    Test types:
+     - unit tests (codebase): individual components, methods
+     - integration tests (infrastructure): interaction with database, file systems, network resources
+     - load tests (stress test): concurrency responsiveness
+    
+    TDD (test driven development): test first -> code after
+     - simpler, readable, efficient code
+     - help with regression, provide documentation, facilitate good design
+    
+    Characteristics:
+     - fast
+     - isolated
+     - repeatable
+     - self-checking
+     - timely
+    
+    Code coverage
+    
+    Fake, mock, stub:
+     - fake -> mock: assert against mock
+     - fake -> stub
+    
+    Naming convention:
+     - the name of the method being tested
+     - the scenario under which it's being tested
+     - the expected behavior when the scenario is invoked
+    
+    Structure:
+     - arrange
+     - act
+     - assert
+
+
+ERP: enterprise resource planning
+MRP: material requirements planning
+MRO: maintenance, repair, operations
+CRM: customer relationship management
+
+
+
+MVVM:
+  Logic:
+    - Services: variable storage, algorithm
+    - IServices: glue, limited exposure, unknown source
+    - Models: sql table mirror
+    - Commands: IServices execution
+
+  UI:
+    - ViewModels: collection of services and commands
+    - Views
+
+Clean Architecture:
+  0. Enterprise Business Rules
+  1. Application Business Rules
+  2. Interface Adapters
+  3. Frameworks & Drivers
+
+Devices-------------------------------------Web
+|                                             |
+|        ___Controllers / ViewModels___       |
+|       |                              |      |
+|       |        __Use Cases__         |      |
+|       |       |             |        |      |
+|       |       |  Entities   |        |      |
+|       |       |             |        |      |
+|       |       |__Use Cases__|        |      |
+|       |                              |      |
+|       Gateways______________Presenters      |
+|                                             |
+DB------------External Interfaces------------UI
+
+
+
+           _____Write (Command)___
+          |                       |
+Caller----|                       |----Database
+          |_____Read (Query)______|
+
+
+
+Vertical slices:
+
+                  Features
+Command Command               Query Query
+    |       |                   |     |
+    |       |                   |     |
+    |_______|_____Aggregate_____|_____|
+                      |
+                  Database
+
+
+                  Features
+Command Command               Query Query
+    |       |                   |     |
+    |_______|                   |_____|
+        |                          |
+    Aggregate__________________Data Model
+                      |
+                  Database
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDateTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <dateTime>2000-02-29T00:00:00</dateTime>
+  <dateTime>2004-02-29T00:00:00</dateTime>
+  <dateTime>2008-02-29T00:00:00</dateTime>
+  <dateTime>2012-02-29T00:00:00</dateTime>
+  <dateTime>2016-02-29T00:00:00</dateTime>
+  <dateTime>2020-02-29T00:00:00</dateTime>
+  <dateTime>2024-02-29T00:00:00</dateTime>
+  <dateTime>2028-02-29T00:00:00</dateTime>
+  <dateTime>2032-02-29T00:00:00</dateTime>
+  <dateTime>2036-02-29T00:00:00</dateTime>
+  <dateTime>2040-02-29T00:00:00</dateTime>
+  <dateTime>2044-02-29T00:00:00</dateTime>
+  <dateTime>2048-02-29T00:00:00</dateTime>
+  <dateTime>2052-02-29T00:00:00</dateTime>
+  <dateTime>2056-02-29T00:00:00</dateTime>
+  <dateTime>2060-02-29T00:00:00</dateTime>
+  <dateTime>2064-02-29T00:00:00</dateTime>
+  <dateTime>2068-02-29T00:00:00</dateTime>
+  <dateTime>2072-02-29T00:00:00</dateTime>
+  <dateTime>2076-02-29T00:00:00</dateTime>
+  <dateTime>2080-02-29T00:00:00</dateTime>
+  <dateTime>2084-02-29T00:00:00</dateTime>
+  <dateTime>2088-02-29T00:00:00</dateTime>
+  <dateTime>2092-02-29T00:00:00</dateTime>
+  <dateTime>2096-02-29T00:00:00</dateTime>
+</ArrayOfDateTime>

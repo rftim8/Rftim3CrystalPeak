@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RftIconImageList_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconImageList_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTCP_IP_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTCP_IP_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconComboBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconComboBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconCSV_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconCSV_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMongoDB_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMongoDB_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconStatusStrip_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconStatusStrip_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMSSQL_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMSSQL_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconHScrollBar_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconHScrollBar_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconOther_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconOther_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPacking_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPacking_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconColumnChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconColumnChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconColorDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconColorDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFinalTest_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFinalTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTableLayoutPanel_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTableLayoutPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconProgressBarHorizontal_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconProgressBarHorizontal_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFactory_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFactory_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconExit_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconExit_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSaveFileDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSaveFileDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSQLite_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSQLite_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSockets_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSockets_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconProgressBarVertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconProgressBarVertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconProgressBar_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconProgressBar_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFontDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFontDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconCommon_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconCommon_16xLG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconProcess_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconProcess_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPageSetupDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPageSetupDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSoldering_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSoldering_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconAuthorization_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconAuthorization_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPreferences_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPreferences_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPrinting_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPrinting_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconComponent_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconComponent_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconGroupBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconGroupBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconShipping_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconShipping_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMonthCalendar_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMonthCalendar_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFolderBrowserDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFolderBrowserDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconRangeBarChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconRangeBarChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMaterials_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMaterials_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconRichTextBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconRichTextBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconCertificates_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconCertificates_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconConsole_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconConsole_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconInventory_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconInventory_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconNotifyIcon_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconNotifyIcon_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconBarChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconBarChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconBindingSource_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconBindingSource_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconToolStripContainer_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconToolStripContainer_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconStackedColumnChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconStackedColumnChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconDoughnutChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconDoughnutChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconAD_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconAD_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconReceiving_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconReceiving_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconOven_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconOven_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSplitter_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSplitter_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconVScrollBar_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconVScrollBar_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPrintDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPrintDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconHelpProvider_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconHelpProvider_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLabel_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLabel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPieChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPieChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMarking_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMarking_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTabControl_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTabControl_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPrint_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPrint_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconWarehouse_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconWarehouse_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSplineChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSplineChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTreeView_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTreeView_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconServiceController_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconServiceController_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPanel_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLinkLabel_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLinkLabel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMenuStrip_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMenuStrip_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconBackgroundWorker_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconBackgroundWorker_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconContextMenuStrip_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconContextMenuStrip_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconDomainUpDown_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconDomainUpDown_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPrintPreviewDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPrintPreviewDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconData_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconData_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLocalGroups_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLocalGroups_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconListView_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconListView_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconDateTimePicker_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconDateTimePicker_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTest_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMinimize_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMinimize_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPaste_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPaste_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSplitContainer_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSplitContainer_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMySQL_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMySQL_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconRadioButton_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconRadioButton_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconOpenFileDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconOpenFileDialog_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSettings_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSettings_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconToolBar_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconToolBar_16x.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFullscreen_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFullscreen_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconDataGridView_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconDataGridView_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPrintPreviewControl_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPrintPreviewControl_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconDialog_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconDialog_16x.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconContainer_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconContainer_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconDepanelling_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconDepanelling_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconADGroups_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconADGroups_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconCheckdListBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconCheckdListBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconNumericUpDown_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconNumericUpDown_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLogin_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLogin_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTextBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTextBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSQLServer_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSQLServer_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconInspection_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconInspection_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconWindowMaximize_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconWindowMaximize_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSerialPort_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSerialPort_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconRelationalDatabase_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconRelationalDatabase_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconRelational_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconRelational_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPostgre_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPostgre_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSMT_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSMT_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconToolTip_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconToolTip_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFileSystemWatcher_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFileSystemWatcher_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTrackBar_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTrackBar_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLaser_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLaser_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPolicy_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPolicy_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconCheckBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconCheckBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPrintDocument_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPrintDocument_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconGauge_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconGauge_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPurchasing_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPurchasing_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconNoSQLDatabase_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconNoSQLDatabase_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconToolStrip_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconToolStrip_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSaveAs_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSaveAs_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconAssembly_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconAssembly_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLDAP_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLDAP_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconKeyboard_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconKeyboard_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconComponents_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconComponents_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconAuthentication_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconAuthentication_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFlowLayoutPanel_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFlowLayoutPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTimer_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTimer_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconErrorProvider_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconErrorProvider_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLabeling_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLabeling_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconLineChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconLineChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconStackedBar100_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconStackedBar100_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconStackedBarChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconStackedBarChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconWindowSizeNormal_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconWindowSizeNormal_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconRepair_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconRepair_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconStation_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconStation_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconListBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconListBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconStackedColumn100_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconStackedColumn100_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconChart_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconChart_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconFlash_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconFlash_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPictureBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPictureBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconUser_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconUser_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconTraceability_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconTraceability_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconPropertyGrid_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconPropertyGrid_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconHomepage_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconHomepage_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconMaskedTextBox_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconMaskedTextBox_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconNoSQL_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconNoSQL_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconButton_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconButton_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RftIconSendEmail_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RftIconSendEmail_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
