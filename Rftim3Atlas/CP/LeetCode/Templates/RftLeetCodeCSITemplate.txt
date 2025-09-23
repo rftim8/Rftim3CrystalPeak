@@ -1,7 +1,0 @@
-﻿namespace RftCP.LeetCode
-{
-    public interface I[x]
-    {
-        public void PrintSolution();
-    }
-}

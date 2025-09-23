@@ -21,12 +21,4 @@
 		<ProjectReference Include="..\Rftim3Tracer\Rftim3Tracer.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Folder Include="Microsoft\Data\SqlClient\" />
-		<Folder Include="Microsoft\Extensions\Configuration\" />
-		<Folder Include="Microsoft\Extensions\DependencyInjection\" />
-		<Folder Include="Syntax\Expressions\" />
-		<Folder Include="Syntax\Keywords\" />
-	</ItemGroup>
-
 </Project>

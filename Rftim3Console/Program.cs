@@ -10,8 +10,8 @@ namespace Rftim3Console
         {
             ArgumentNullException.ThrowIfNull(args);
 
-            //TestADOClient();
-            //TestFileIO();
+            TestADOClient();
+            TestFileIO();
         }
 
         private static void TestADOClient()

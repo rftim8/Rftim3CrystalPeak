@@ -1,7 +1,0 @@
-﻿namespace RftCP.CodinGame
-{
-    public interface I[x]
-    {
-        public void PrintSolution();
-    }
-}
