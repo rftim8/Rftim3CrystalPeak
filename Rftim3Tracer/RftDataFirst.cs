@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.Data;
 
-namespace Rftim3Tracer.Temp.RftMicrosoft.Data.SqlClient
+namespace Rftim3Tracer
 {
     public class RftDataFirst
     {
