@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="PGERP.RftVederi.RftVedereMeniuTop"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PGERP.RftVederi"
+             xmlns:rftComponentePersonalizate="clr-namespace:PGERPComponentePersonalizate;assembly=PGERPComponentePersonalizate"
+             mc:Ignorable="d" 
+             d:DesignHeight="30">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="1"
+                                                                            Content="Cumparaturi"
+                                                                            ImageSource="{StaticResource RftSursaImagineCumparaturi}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutCumparaturi}"/>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="2"
+                                                                            Content="Divertisment"
+                                                                            ImageSource="{StaticResource RftSursaImagineDivertisment}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutDivertisment}"/>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="3"
+                                                                            Content="Educatie"
+                                                                            ImageSource="{StaticResource RftSursaImagineEducatie}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutEducatie}"/>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="4"
+                                                                            Content="Facturi"
+                                                                            ImageSource="{StaticResource RftSursaImagineFacturi}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutFacturi}"/>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="5"
+                                                                            Content="Sanatate"
+                                                                            ImageSource="{StaticResource RftSursaImagineSanatate}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutSanatate}"/>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="6"
+                                                                            Content="Transport"
+                                                                            ImageSource="{StaticResource RftSursaImagineTransport}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutTransport}"/>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonMeniuTop Grid.Column="8"
+                                                                            Content="Acasa"
+                                                                            ImageSource="{StaticResource RftSursaImagineUtilizator}"
+                                                                            Command="{Binding RftComandaAccesareVedereContinutPrincipal}"/>
+
+        <Menu x:Name="RftMeniuUtilizator"
+              Grid.Column="9"
+              Style="{StaticResource RftStilMeniu}">
+            <MenuItem Header="{Binding RftNumeUtilizator}"
+                      HorizontalAlignment="Center"
+                      Style="{StaticResource RftMeniuArticolTop}">
+                <MenuItem Header="Documentatie"
+                          InputGestureText="Ctrl+H"
+                          Icon="{StaticResource RftIcoanaDocumentatie}"
+                          Command="{Binding RftComandaDocumentatie}"/>
+                <Separator/>
+                <MenuItem Header="Cont"
+                          Icon="{StaticResource RftIcoanaCont}"
+                          Command="{Binding RftComandaAccesareVedereSetariCont}"/>
+                <MenuItem Header="Locatii"
+                          Icon="{StaticResource RftIcoanaLocatii}"
+                          Command="{Binding RftComandaAccesareVedereSetariLocatii}"/>
+                <Separator/>
+                <MenuItem Header="Luminozitate"
+                          InputGestureText="Ctrl+M"
+                          Icon="{DynamicResource RftIcoanaArticolMeniuTopLuminozitate}"
+                          Command="{Binding RftComandaSchimbareTemaCulori}"/>
+                <MenuItem Header="Minimizare"
+                          InputGestureText="F11"
+                          Icon="{StaticResource RftIcoanaArticolMeniuTopMinimizare}"
+                          Command="{Binding RftComandaMinimizareFereastra}"/>
+                <MenuItem Header="Maximizare"
+                          InputGestureText="Ctrl+F"
+                          Icon="{StaticResource RftIcoanaArticolMeniuTopMaximizare}"
+                          Command="{Binding RftComandaMaximizareFereastra}"/>
+                <Separator/>
+                <MenuItem Header="Deconectare"
+                          InputGestureText="Ctrl+L"
+                          Icon="{StaticResource RftIcoanaArticolMeniuTopDeconectare}"
+                          Command="{Binding RftComandaDeconectare}"/>
+                <Separator/>
+                <MenuItem Header="Iesire"
+                          InputGestureText="Ctrl+Q"
+                          Icon="{StaticResource RftIcoanaArticolMeniuTopIesire}"
+                          Command="{Binding RftComandaIesireProgram}"/>
+            </MenuItem>
+        </Menu>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar Grid.Column="10"
+                                                                                    ImageSource="{DynamicResource RftSursaImagineTemaCulori}"
+                                                                                    Command="{Binding RftComandaSchimbareTemaCulori}">
+            <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+                <ToolTip Placement="MousePoint">
+                    <TextBlock Text="{Binding RftMesajLuminozitate}"/>
+                </ToolTip>
+            </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+        </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar Grid.Column="11"
+                                                                                    ImageSource="{StaticResource RftSursaImagineMinimizareFereastra}"
+                                                                                    Command="{Binding RftComandaMinimizareFereastra}">
+            <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+                <ToolTip Placement="MousePoint">
+                    <TextBlock Text="{Binding RftMesajMinimizare}"/>
+                </ToolTip>
+            </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+        </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar Grid.Column="12"
+                                                                                    ImageSource="{StaticResource RftSursaImagineMaximizareFereastra}"
+                                                                                    Command="{Binding RftComandaMaximizareFereastra}">
+            <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+                <ToolTip Placement="MousePoint">
+                    <TextBlock Text="{Binding RftMesajMaximizare}"/>
+                </ToolTip>
+            </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+        </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar>
+
+        <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitar Grid.Column="13"
+                                                                            ImageSource="{StaticResource RftSursaImagineIesireProgram}"
+                                                                            Command="{Binding RftComandaIesireProgram}">
+            <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitar.ToolTip>
+                <ToolTip Placement="MousePoint">
+                    <TextBlock Text="{Binding RftMesajIesire}"/>
+                </ToolTip>
+            </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitar.ToolTip>
+        </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitar>
+    </Grid>
+</UserControl>

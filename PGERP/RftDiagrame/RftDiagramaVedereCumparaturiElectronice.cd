@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PGERP.RftModele.RftModelCumparaturiElectronice">
+    <Position X="31" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAABACBIAAggAAABAAAAAQEAAFEAAAAAAAAAAAA=</HashCode>
+      <FileName>RftModele\RftModelCumparaturiElectronice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftSQL.RftServiciuDeDateCumparaturiElectronice&lt;T&gt;">
+    <Position X="26.5" Y="2.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftSQL\RftServiciuDeDateCumparaturiElectronice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftSQL.RftContextGeneratorModel" BaseTypeListCollapsed="true">
+    <Position X="30.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftSQL\RftContextGeneratorModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PGERP.RftSQL.RftContextModel">
+    <Position X="34" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACBQAAAJAQAEAAAAEAABAAAIQAIAgEAECCAAAEEAAA=</HashCode>
+      <FileName>RftSQL\RftContextModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftVederi.RftVedereContinutElectronice" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftVederi\RftVederiContinut\RftVedereContinutElectronice.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PGERP.RftVederiModele.RftVederiModeleContinut.RftVedereModelContinutElectronice">
+    <Position X="14.25" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAMAAABEAAAgAUABEAAAAAAEAAEgAAAAAAAAAAAARBA=</HashCode>
+      <FileName>RftVederiModele\RftVederiModeleContinut\RftVedereModelContinutElectronice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftVederiModele.RftVedereModelBaza">
+    <Position X="7" Y="12.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>RftVederiModele\RftVedereModelBaza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PGERP.RftModele.RftModelBaza">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftModele\RftModelBaza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftVederi.RftVedereContinut">
+    <Position X="11" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftVederi\RftVederiContinut\RftVedereContinut.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PGERP.RftVederiModele.RftVederiModeleContinut.RftVedereModelContinut">
+    <Position X="10.75" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftVederiModele\RftVederiModeleContinut\RftVedereModelContinut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftVederi.RftVedereMeniuStangaCumparaturi">
+    <Position X="2.25" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftVederi\RftVederiMeniuStanga\RftVedereMeniuStangaCumparaturi.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PGERP.RftComenzi.RftAccesareVederi.RftComandaAccesareVedereContinutElectronice">
+    <Position X="6.25" Y="7.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>RftComenzi\RftAccesareVederi\RftComandaAccesareVedereContinutElectronice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PGERP.RftComenzi.RftComandaBaza">
+    <Position X="7" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RftComenzi\RftComandaBaza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PGERP.RftVederiModele.RftVederiModeleMeniuStanga.RftVedereModelMeniuStangaCumparaturi">
+    <Position X="1.5" Y="7.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>RftVederiModele\RftVederiModeleMeniuStanga\RftVedereModelMeniuStangaCumparaturi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="RftCuloareFundalGeneral">#ffffff</Color>
+    <Color x:Key="RftCuloarePrimPlanGeneral">#000000</Color>
+    <Color x:Key="RftCuloareFundalMeniuTop">#c9c9c9</Color>
+    <Color x:Key="RftCuloareFundalMeniuStanga">#7c7c7c</Color>
+
+    <SolidColorBrush x:Key="RftPerieFundalGeneral" Color="{StaticResource RftCuloareFundalGeneral}"/>
+    <SolidColorBrush x:Key="RftPeriePrimPlanGeneral" Color="{StaticResource RftCuloarePrimPlanGeneral}"/>
+    <SolidColorBrush x:Key="RftPerieFundalMeniuTop" Color="{StaticResource RftCuloareFundalMeniuTop}"/>
+    <SolidColorBrush x:Key="RftPerieFundalMeniuStanga" Color="{StaticResource RftCuloareFundalMeniuStanga}"/>
+
+    <Image x:Key="RftIcoanaArticolMeniuTopLuminozitate" Source="/RftResurse/RftTemaCuloriDeschise_16x.png"/>
+
+    <ImageSource x:Key="RftSursaImagineTemaCulori">/RftResurse/RftTemaCuloriDeschise_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineComutatorMeniuStanga">/RftResurse/RftComutatorMeniuStangaCuloriDeschise_48x.png</ImageSource>
+
+</ResourceDictionary>

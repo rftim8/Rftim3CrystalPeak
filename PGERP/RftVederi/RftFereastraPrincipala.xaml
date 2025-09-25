@@ -1,0 +1,168 @@
+﻿<Window x:Class="PGERP.RftVederi.RftFereastraPrincipala"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PGERP"
+        xmlns:rftVederi="clr-namespace:PGERP.RftVederi"
+        xmlns:rftVederiModele="clr-namespace:PGERP.RftVederiModele"
+        xmlns:rftVederiModeleContinut="clr-namespace:PGERP.RftVederiModele.RftVederiModeleContinut"
+        xmlns:rftVederiModeleMeniuStanga="clr-namespace:PGERP.RftVederiModele.RftVederiModeleMeniuStanga"
+        mc:Ignorable="d"
+        Title="PGERP" 
+        Height="1080" 
+        Width="1920"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        AllowsTransparency="True"
+        Background="{DynamicResource RftPerieFundalGeneral}"
+        Foreground="{DynamicResource RftPeriePrimPlanGeneral}"
+        FontFamily="Verdana" 
+        KeyDown="Window_KeyDown">
+    <DockPanel>
+        <Grid x:Name="RftGrilaMeniuTop"
+              DockPanel.Dock="Top"
+              Style="{DynamicResource RftStilGrilaMeniuTop}" 
+              MouseLeftButtonDown="RftGrilaMeniuTop_MouseLeftButtonDown">
+            <ContentControl Content="{Binding RftVedereModelMeniuTopCurent}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type rftVederiModele:RftVedereModelMeniuTop}">
+                        <rftVederi:RftVedereMeniuTop/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+        </Grid>
+
+        <Grid x:Name="RftGrilaMeniuBottom"
+              DockPanel.Dock="Bottom"
+              Style="{DynamicResource RftStilGrilaMeniuTop}">
+            <ContentControl Content="{Binding RftVedereModelMeniuBottomCurent}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type rftVederiModele:RftVedereModelMeniuBottom}">
+                        <rftVederi:RftVedereMeniuBottom/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+        </Grid>
+
+        <Grid>
+            <Grid x:Name="RftGrilaMeniuStanga"
+                  Style="{StaticResource RftStilMeniuStanga}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border x:Name="RftGranitaText"
+                            BorderThickness="10 0 0 3"
+                            BorderBrush="{DynamicResource RftPerieFundalMeniuTop}"
+                            Grid.Column="0"
+                            Height="50"
+                            Margin="20 0 0 0"
+                            Width="180">
+                        <Border.RenderTransform>
+                            <SkewTransform AngleX="-25"/>
+                        </Border.RenderTransform>
+
+                        <TextBlock x:Name="RftText"
+                                   FontSize="18"
+                                   Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding RftTextCategorieCurenta}"
+                                   VerticalAlignment="Center">
+
+                            <TextBlock.RenderTransform>
+                                <SkewTransform AngleX="25"/>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="10"
+                                              Color="{DynamicResource RftCuloarePrimPlanGeneral}"
+                                      Direction="0"
+                                      Opacity="0.9"
+                                      ShadowDepth="0"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                            BorderThickness="0 0 0 2"
+                            Margin="3 0 3 0">
+                        <ToggleButton x:Name="RftComutatorMeniuStanga"
+                                      Style="{StaticResource RftStilComutatorMeniuStanga}">
+                            <ToggleButton.Triggers>
+                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="RftGrilaMeniuStanga"
+                                                         Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
+                                                         BeginTime="0:0:0.2"
+                                                         Duration="0:0:0.2"
+                                                         From="-200"
+                                                         To="0"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="RftGrilaMeniuStanga"
+                                                         Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
+                                                         BeginTime="0:0:0.2"
+                                                         Duration="0:0:0.2"
+                                                         From="0"
+                                                         To="-200"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </ToggleButton.Triggers>
+                        </ToggleButton>
+                    </Border>
+                </Grid>
+
+                <ContentControl Content="{Binding RftVedereModelMeniuStangaCurent}"
+                                Grid.Row="1"
+                                Margin="0 15 0 0">
+                    <ContentControl.Resources>
+                        <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStanga}">
+                            <rftVederi:RftVedereMeniuStanga/>
+                        </DataTemplate>
+                    </ContentControl.Resources>
+                </ContentControl>
+
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="10"
+                                      Color="{DynamicResource RftCuloarePrimPlanGeneral}"
+                                      Direction="0"
+                                      Opacity="0.5"
+                                      ShadowDepth="0"/>
+                </Grid.Effect>
+            </Grid>
+
+            <Grid x:Name="RftGrilaContinut"
+                  Style="{StaticResource RftStilGrilaContinut}">
+                <ContentControl Content="{Binding RftVedereModelContinutCurent}">
+                    <ContentControl.Resources>
+                        <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinut}">
+                            <rftVederi:RftVedereContinut/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type rftVederiModele:RftVedereModelSetariCont}">
+                            <rftVederi:RftVedereSetariCont/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type rftVederiModele:RftVedereModelSetariLocatii}">
+                            <rftVederi:RftVedereSetariLocatii/>
+                        </DataTemplate>
+                    </ContentControl.Resources>
+                </ContentControl>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

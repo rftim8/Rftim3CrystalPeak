@@ -56,10 +56,10 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Controls.Add(groupBox1, 3, 0);
             tableLayoutPanel1.Controls.Add(listView3, 2, 0);
             tableLayoutPanel1.Controls.Add(listView2, 1, 0);
@@ -91,9 +91,9 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Dock = DockStyle.Fill;
-            groupBox1.Location = new Point(1464, 3);
+            groupBox1.Location = new Point(1560, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(482, 1034);
+            groupBox1.Size = new Size(386, 1034);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "System";
@@ -248,9 +248,9 @@
             listView3.Dock = DockStyle.Fill;
             listView3.FullRowSelect = true;
             listView3.HeaderStyle = ColumnHeaderStyle.None;
-            listView3.Location = new Point(977, 3);
+            listView3.Location = new Point(1171, 3);
             listView3.Name = "listView3";
-            listView3.Size = new Size(481, 1034);
+            listView3.Size = new Size(383, 1034);
             listView3.TabIndex = 2;
             listView3.UseCompatibleStateImageBehavior = false;
             listView3.View = View.Details;
@@ -261,9 +261,9 @@
             listView2.Dock = DockStyle.Fill;
             listView2.FullRowSelect = true;
             listView2.HeaderStyle = ColumnHeaderStyle.None;
-            listView2.Location = new Point(490, 3);
+            listView2.Location = new Point(782, 3);
             listView2.Name = "listView2";
-            listView2.Size = new Size(481, 1034);
+            listView2.Size = new Size(383, 1034);
             listView2.TabIndex = 1;
             listView2.UseCompatibleStateImageBehavior = false;
             listView2.View = View.Details;
@@ -276,7 +276,7 @@
             listView1.HeaderStyle = ColumnHeaderStyle.None;
             listView1.Location = new Point(3, 3);
             listView1.Name = "listView1";
-            listView1.Size = new Size(481, 1034);
+            listView1.Size = new Size(773, 1034);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;

@@ -1,0 +1,2258 @@
+﻿<UserControl x:Class="PGERP.RftVederi.RftVedereContinut"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PGERP.RftVederi"
+             xmlns:rftVederiContinut="clr-namespace:PGERP.RftVederi"
+             xmlns:rftVederiModeleContinut="clr-namespace:PGERP.RftVederiModele.RftVederiModeleContinut"
+             xmlns:rftVederiModeleContinutPrincipal="clr-namespace:PGERP.RftVederiModele"
+             xmlns:rftConvertori="clr-namespace:PGERP.RftConvertori"
+             xmlns:rftHarti="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <rftConvertori:RftConvertorBuget x:Key="RftConvertorBuget"/>
+        <rftConvertori:RftConvertorLungimeText x:Key="RftConvertorLungimeText"/>
+        <rftConvertori:RftConvertorMultipluBuget x:Key="RftConvertorMultipluBuget"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="auto"
+                           Style="{StaticResource RftExtensieRand}"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Background="{DynamicResource RftPerieFundalMeniuTop}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="225"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                    BorderThickness="10 0 0 0"
+                    Margin="15 0 0 0"
+                    Height="30"
+                    BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                    Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <SkewTransform AngleX="-25"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Border.Style>
+
+                <Label Content="Buget Total Alocat"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="-15 0 0 0"
+                       FontFamily="Verdana">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <SkewTransform AngleX="25"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </Border>
+
+            <Border Grid.Column="1"
+                    BorderThickness="10 0 0 0"
+                    Margin="10 0 0 0"
+                    Height="30"
+                    BorderBrush="{StaticResource RftPerieFundalSucces}"
+                    Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <SkewTransform AngleX="-25"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Border.Style>
+
+                <Label Content="{Binding RftBugetTotalActual}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="-15 0 0 0"
+                       FontFamily="Verdana">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <SkewTransform AngleX="25"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </Border>
+
+            <Border Grid.Column="3"
+                    BorderThickness="10 0 0 0"
+                    Margin="25 0 0 0"
+                    Height="30"
+                    BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                    Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <SkewTransform AngleX="-25"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Border.Style>
+
+                <Label Content="Buget Nealocat"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="-15 0 0 0"
+                       FontFamily="Verdana">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <SkewTransform AngleX="25"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </Border>
+
+            <Border Grid.Column="4"
+                    BorderThickness="10 0 0 0"
+                    Margin="10 0 0 0"
+                    Height="30"
+                    BorderBrush="{StaticResource RftPerieFundalSucces}"
+                    Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <SkewTransform AngleX="-25"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Border.Style>
+
+                <Label x:Name="RftBugetNealocatActual"
+                       Content="{Binding RftBugetNealocatActual}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="-15 0 0 0"
+                       FontFamily="Verdana">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <SkewTransform AngleX="25"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </Border>
+
+            <TextBox x:Name="RftCasetaBugetNealocat"
+                     Grid.Column="5"
+                     Height="30"
+                     FontSize="16"
+                     VerticalContentAlignment="Center"
+                     BorderThickness="1"
+                     Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                     Text="{Binding RftBugetNealocatTemporar, UpdateSourceTrigger=PropertyChanged}"
+                     TextAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="0">
+
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding RftComandaSetareBugetNealocat}" Key="Enter" />
+                </TextBox.InputBindings>
+
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Background"
+                                Value="Transparent"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding = "{Binding Text, 
+                            ElementName=RftCasetaBugetNealocat,
+                            Converter={StaticResource RftConvertorBuget}}"
+                                     Value = "true">
+                                <Setter Property="TextBox.Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                            <GradientStop Color="#000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding = "{Binding Text, 
+                            ElementName=RftCasetaBugetNealocat,
+                            Converter={StaticResource RftConvertorBuget}}"
+                                     Value = "false">
+                                <Setter Property="TextBox.Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                            <GradientStop Color="#000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+
+            <TextBlock x:Name="RftMesajEroare"
+                   Text="{Binding RftMesajEroare}"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="16"
+                   Grid.Column="6"
+                   Foreground="{StaticResource RftPerieAutentificareFundalGeneral}">
+                <TextBlock.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Binding = "{Binding Text, 
+                            ElementName=RftMesajEroare,
+                            Converter={StaticResource RftConvertorLungimeText}}"
+                                     Value = "true">
+                                <Setter Property="TextBlock.Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush>
+                                            <GradientStop Color="#ff3333" Offset="0"/>
+                                            <GradientStop Color="#000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+        </Grid>
+
+        <Expander Grid.Row="1"
+                  x:Name="Expander" 
+                  MaxHeight="350"
+                  Margin="0 5 0 5"
+                  Header="Distributie Buget"
+                  FontSize="16"
+                  FontFamily="Verdana"
+                  VerticalContentAlignment="Center"
+                  HorizontalContentAlignment="Center"
+                  Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                  IsExpanded="{Binding RftRandExtins}">
+            <Expander.Style>
+                <Style TargetType="Expander">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush>
+                                <GradientStop Color="{StaticResource RftCuloareAutentificareFundalSecundar}" Offset="0"/>
+                                <GradientStop Color="{DynamicResource RftCuloareFundalMeniuTop}" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Expander.Style>
+
+            <Grid Width="1855"
+                          Height="280"
+                          Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="175"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="175"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="125"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="15"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0"
+                       Grid.Row="0"
+                       Content="Cumparaturi"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label x:Name="RftBugetCumparaturiActual"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Content="{Binding RftBugetCumparaturiActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="3"
+                       Grid.Row="0"
+                       Content="Alimente"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="4"
+                       Grid.Row="0"
+                       Content="{Binding RftBugetAlimenteActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetAlimente"
+                         Grid.Column="5"
+                         Grid.Row="0"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetAlimenteTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetAlimente}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetAlimente" Path="Text"/>
+                                            <Binding Path="RftBugetAlimenteActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetAlimente" Path="Text"/>
+                                            <Binding Path="RftBugetAlimenteActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="7"
+                       Grid.Row="0"
+                       Content="Electronice"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetElectronice"
+                         Grid.Column="9"
+                         Grid.Row="0"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetElectroniceTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetElectronice}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetElectronice" Path="Text"/>
+                                            <Binding Path="RftBugetElectroniceActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetElectronice" Path="Text"/>
+                                            <Binding Path="RftBugetElectroniceActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="8"
+                       Grid.Row="0"
+                       Content="{Binding RftBugetElectroniceActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="11"
+                               Grid.Row="0"
+                               Content="Imbracaminte"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="12"
+                       Grid.Row="0"
+                       Content="{Binding RftBugetImbracaminteActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetImbracaminte"
+                         Grid.Column="13"
+                         Grid.Row="0"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetImbracaminteTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetImbracaminte}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetImbracaminte" Path="Text"/>
+                                            <Binding Path="RftBugetImbracaminteActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetImbracaminte" Path="Text"/>
+                                            <Binding Path="RftBugetImbracaminteActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+
+                <Label Grid.Column="0"
+                       Grid.Row="1"
+                       Content="Divertisment"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label x:Name="RftBugetDivertismentActual"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Content="{Binding RftBugetDivertismentActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="3"
+                               Grid.Row="1"
+                               Content="Filme"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="4"
+                       Grid.Row="1"
+                       Content="{Binding RftBugetFilmeActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetFilme"
+                         Grid.Column="5"
+                         Grid.Row="1"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetFilmeTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetFilme}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetFilme" Path="Text"/>
+                                            <Binding Path="RftBugetFilmeActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetFilme" Path="Text"/>
+                                            <Binding Path="RftBugetFilmeActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="7"
+                               Grid.Row="1"
+                               Content="Jocuri"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="8"
+                       Grid.Row="1"
+                       Content="{Binding RftBugetJocuriActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetJocuri"
+                         Grid.Column="9"
+                         Grid.Row="1"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetJocuriTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetJocuri}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetJocuri" Path="Text"/>
+                                            <Binding Path="RftBugetJocuriActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetJocuri" Path="Text"/>
+                                            <Binding Path="RftBugetJocuriActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="11"
+                               Grid.Row="1"
+                               Content="Muzica"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="12"
+                       Grid.Row="1"
+                       Content="{Binding RftBugetMuzicaActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetMuzica"
+                         Grid.Column="13"
+                         Grid.Row="1"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetMuzicaTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetMuzica}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetMuzica" Path="Text"/>
+                                            <Binding Path="RftBugetMuzicaActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetMuzica" Path="Text"/>
+                                            <Binding Path="RftBugetMuzicaActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+
+                <Label Grid.Column="0"
+                       Grid.Row="2"
+                       Content="Educatie"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label x:Name="RftBugetEducatieActual"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       Content="{Binding RftBugetEducatieActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="3"
+                               Grid.Row="2"
+                               Content="Carti Electronice"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="4"
+                       Grid.Row="2"
+                       Content="{Binding RftBugetCartiElectroniceActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetCartiElectronice"
+                         Grid.Column="5"
+                         Grid.Row="2"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetCartiElectroniceTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetCartiElectronice}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetCartiElectronice" Path="Text"/>
+                                            <Binding Path="RftBugetCartiElectroniceActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetCartiElectronice" Path="Text"/>
+                                            <Binding Path="RftBugetCartiElectroniceActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="7"
+                               Grid.Row="2"
+                               Content="Evenimente"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="8"
+                       Grid.Row="2"
+                       Content="{Binding RftBugetEvenimenteActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetEvenimente"
+                         Grid.Column="9"
+                         Grid.Row="2"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetEvenimenteTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetEvenimente}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetEvenimente" Path="Text"/>
+                                            <Binding Path="RftBugetEvenimenteActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetEvenimente" Path="Text"/>
+                                            <Binding Path="RftBugetEvenimenteActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="11"
+                               Grid.Row="2"
+                               Content="Invatamant"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="12"
+                       Grid.Row="2"
+                       Content="{Binding RftBugetInvatamantActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetInvatamant"
+                         Grid.Column="13"
+                         Grid.Row="2"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetInvatamantTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetInvatamant}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetInvatamant" Path="Text"/>
+                                            <Binding Path="RftBugetInvatamantActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetInvatamant" Path="Text"/>
+                                            <Binding Path="RftBugetInvatamantActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+
+                <Label Grid.Column="0"
+                       Grid.Row="3"
+                       Content="Facturi"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label x:Name="RftBugetFacturiActual"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       Content="{Binding RftBugetFacturiActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="3"
+                               Grid.Row="3"
+                               Content="Apa"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="4"
+                       Grid.Row="3"
+                       Content="{Binding RftBugetApaActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetApa"
+                         Grid.Column="5"
+                         Grid.Row="3"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetApaTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetApa}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetApa" Path="Text"/>
+                                            <Binding Path="RftBugetApaActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetApa" Path="Text"/>
+                                            <Binding Path="RftBugetApaActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="7"
+                               Grid.Row="3"
+                               Content="Curent"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="8"
+                       Grid.Row="3"
+                       Content="{Binding RftBugetCurentActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetCurent"
+                         Grid.Column="9"
+                         Grid.Row="3"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetCurentTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetCurent}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetCurent" Path="Text"/>
+                                            <Binding Path="RftBugetCurentActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetCurent" Path="Text"/>
+                                            <Binding Path="RftBugetCurentActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="11"
+                               Grid.Row="3"
+                               Content="Telefonie"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="12"
+                       Grid.Row="3"
+                       Content="{Binding RftBugetTelefonieActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetTelefonie"
+                         Grid.Column="13"
+                         Grid.Row="3"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetTelefonieTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetTelefonie}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetTelefonie" Path="Text"/>
+                                            <Binding Path="RftBugetTelefonieActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetTelefonie" Path="Text"/>
+                                            <Binding Path="RftBugetTelefonieActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+
+                <Label Grid.Column="0"
+                       Grid.Row="4"
+                       Content="Sanatate"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label x:Name="RftBugetSanatateActual"
+                       Grid.Column="1"
+                       Grid.Row="4"
+                       Content="{Binding RftBugetSanatateActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="3"
+                               Grid.Row="4"
+                               Content="Activitati Sportive"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="4"
+                       Grid.Row="4"
+                       Content="{Binding RftBugetActivitatiSportiveActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetActivitatiSportive"
+                         Grid.Column="5"
+                         Grid.Row="4"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetActivitatiSportiveTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetActivitatiSportive}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetActivitatiSportive" Path="Text"/>
+                                            <Binding Path="RftBugetActivitatiSportiveActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetActivitatiSportive" Path="Text"/>
+                                            <Binding Path="RftBugetActivitatiSportiveActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="7"
+                               Grid.Row="4"
+                               Content="Medical"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="8"
+                       Grid.Row="4"
+                       Content="{Binding RftBugetMedicalActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetMedical"
+                         Grid.Column="9"
+                         Grid.Row="4"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetMedicalTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetMedical}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetMedical" Path="Text"/>
+                                            <Binding Path="RftBugetMedicalActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetMedical" Path="Text"/>
+                                            <Binding Path="RftBugetMedicalActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+
+                <Label Grid.Column="0"
+                       Grid.Row="5"
+                       Content="Transport"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label x:Name="RftBugetTransportActual"
+                       Grid.Column="1"
+                       Grid.Row="5"
+                       Content="{Binding RftBugetTransportActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="3"
+                               Grid.Row="5"
+                               Content="Personal"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="4"
+                       Grid.Row="5"
+                       Content="{Binding RftBugetPersonalActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetPersonal"
+                         Grid.Column="5"
+                         Grid.Row="5"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetPersonalTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetPersonal}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetPersonal" Path="Text"/>
+                                            <Binding Path="RftBugetPersonalActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetPersonal" Path="Text"/>
+                                            <Binding Path="RftBugetPersonalActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Label Grid.Column="7"
+                               Grid.Row="5"
+                               Content="Comun"
+                               BorderThickness="10 0 0 0"
+                               BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="10 0 0 0"
+                               FontFamily="Verdana">
+                </Label>
+
+                <Label Grid.Column="8"
+                       Grid.Row="5"
+                       Content="{Binding RftBugetComunActual}"
+                       BorderThickness="10 0 0 0"
+                       BorderBrush="{StaticResource RftPerieFundalSucces}"
+                       Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Margin="10 0 0 0"
+                       FontFamily="Verdana">
+                </Label>
+
+                <TextBox x:Name="RftCasetaBugetComun"
+                         Grid.Column="9"
+                         Grid.Row="5"
+                         Height="30"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         BorderThickness="1"
+                         Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                         Text="{Binding RftBugetComunTemporar, UpdateSourceTrigger=PropertyChanged}"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0">
+
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding RftComandaSetareBugetComun}"
+                                    Key="Enter" />
+                    </TextBox.InputBindings>
+
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <DataTrigger Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetComun" Path="Text"/>
+                                            <Binding Path="RftBugetComunActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalEroare}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                                <DataTrigger Value="false">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource RftConvertorMultipluBuget}">
+                                            <Binding Path="RftBugetNealocatActual"/>
+                                            <Binding ElementName="RftCasetaBugetComun" Path="Text"/>
+                                            <Binding Path="RftBugetComunActual"/>
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <DataTrigger.Setters>
+                                        <Setter Property="TextBox.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="{StaticResource RftCuloareFundalSucces}" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+            </Grid>
+        </Expander>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0"
+                      Background="{DynamicResource RftPerieFundalMeniuTop}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"
+                            BorderThickness="10 0 0 0"
+                            Margin="15 0 0 0"
+                            Height="30"
+                            BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                            Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <SkewTransform AngleX="-25"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Border.Style>
+
+                        <Label Content="Locatie noua"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="-15 0 0 0"
+                               FontFamily="Verdana">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="RenderTransform">
+                                        <Setter.Value>
+                                            <SkewTransform AngleX="25"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                    </Border>
+
+                    <TextBox x:Name="RftCasetaLocatieNoua"
+                             Grid.Column="1"
+                             Height="30"
+                             FontSize="16"
+                             VerticalContentAlignment="Center"
+                             BorderThickness="1"
+                             Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                             Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                             Text="{Binding RftLocatieNoua, UpdateSourceTrigger=PropertyChanged}"
+                             TextAlignment="Center"
+                             VerticalAlignment="Center"
+                             Margin="0">
+
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Enter" Command="{Binding RftComandaAdaugareLocatieNoua}" />
+                        </TextBox.InputBindings>
+                    </TextBox>
+
+                    <TextBlock x:Name="RftMesajEroareLocatieNoua"
+                               Text="{Binding RftMesajEroareLocatieNoua}"
+                               TextAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Grid.Column="2"
+                               Foreground="{StaticResource RftPerieAutentificareFundalGeneral}">
+                        <TextBlock.Style>
+                            <Style>
+                                <Style.Triggers>
+                                    <DataTrigger Binding = "{Binding Text, 
+                                        ElementName=RftMesajEroareLocatieNoua,
+                                        Converter={StaticResource RftConvertorLungimeText}}"
+                                                 Value = "true">
+                                        <Setter Property="TextBlock.Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush>
+                                                    <GradientStop Color="#ff3333" Offset="0"/>
+                                                    <GradientStop Color="#000000" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <Button x:Name="RftButonAduagareIndicatorNou"
+                            Grid.Column="2"
+                            Width="0"
+                            Height="0"
+                            Command="{Binding RftComandaAdaugareIndicatorNou}"/>
+                </Grid>
+
+                <rftHarti:Map x:Name="RftHartaPrincipala"
+                              CredentialsProvider="AlGcYCdMDBtcCmQMhgDuSap_AyYwrYJaiALz_zO4mDpG6JssL8-SbendThfPTRVl"
+                              Grid.Row="1"
+                              Center="{Binding RftHartaCentru, 
+                    UpdateSourceTrigger=PropertyChanged, 
+                    Mode=TwoWay}"
+                              AnimationLevel="Full"
+                              ZoomLevel="21"
+                              MouseDoubleClick="RftHartaPrincipala_MouseDoubleClick">
+                    <rftHarti:MapItemsControl x:Name="RftPini"
+                                              ItemsSource="{Binding RftLocatii, 
+                        UpdateSourceTrigger=PropertyChanged, 
+                        Mode=TwoWay}"
+                                              Focusable="True"/>
+                </rftHarti:Map>
+
+                <GridSplitter Grid.Row="2"
+                          VerticalAlignment="Center"
+                          Background="{DynamicResource RftPerieFundalMeniuTop}"
+                          Height="5"
+                          ShowsPreview="True"
+                          HorizontalAlignment="Stretch">
+                </GridSplitter>
+
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"
+                          Background="{DynamicResource RftPerieFundalMeniuTop}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0"
+                                BorderThickness="10 0 0 0"
+                                Margin="15 0 0 0"
+                                Height="30"
+                                BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                                Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="RenderTransform">
+                                        <Setter.Value>
+                                            <SkewTransform AngleX="-25"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Border.Style>
+
+                            <Label Content="Filtru locatii"
+                                   Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                                   Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="16"
+                                   Margin="-15 0 0 0"
+                                   FontFamily="Verdana">
+                                <Label.Style>
+                                    <Style TargetType="Label">
+                                        <Setter Property="RenderTransform">
+                                            <Setter.Value>
+                                                <SkewTransform AngleX="25"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                        </Border>
+
+                        <TextBox x:Name="RftCasetaFiltruLocatii"
+                                 Grid.Column="1"
+                                 Height="30"
+                                 FontSize="16"
+                                 VerticalContentAlignment="Center"
+                                 BorderThickness="1"
+                                 Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                                 Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                                 Text="{Binding RftFiltruLocatii, 
+                            UpdateSourceTrigger=PropertyChanged}"
+                                 TextAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Margin="0">
+                        </TextBox>
+                    </Grid>
+
+                    <Grid x:Name="RftTabelaLocatii"
+                          Grid.Row="1"
+                          Background="{DynamicResource RftPerieFundalGeneral}">
+                        <DataGrid ItemsSource="{Binding RftLocatiiFiltrate}"
+                                  SelectedItem="{Binding RftLocatieSelectata}"
+                                  Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                                  Background="{DynamicResource RftPerieFundalGeneral}"
+                                  IsReadOnly="True"
+                                  GridLinesVisibility="None"
+                                  VerticalAlignment="Stretch"
+                                  AutoGenerateColumns="False"
+                                  SelectionMode="Extended"
+                                  SelectionUnit="FullRow"
+                                  CanUserResizeRows="False"
+                                  HeadersVisibility="Column">
+                            <DataGrid.Resources>
+                                <ContextMenu x:Key="RftMeniuRand">
+                                    <MenuItem Header="Stergere"
+                                              Command="{Binding DataContext.RftComandaStergereRand}"
+                                              Icon="{StaticResource RftIcoanaStergereRand}"/>
+                                </ContextMenu>
+                            </DataGrid.Resources>
+
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Setter Property="Background"
+                                            Value="Transparent"/>
+                                    <Setter Property="Foreground"
+                                            Value="{DynamicResource RftPeriePrimPlanGeneral}"/>
+                                    <Setter Property="ContextMenu"
+                                            Value="{StaticResource RftMeniuRand}"/>
+                                </Style>
+                            </DataGrid.RowStyle>
+
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Locatie"
+                                                    Binding="{Binding ToolTip}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <GridSplitter Grid.Column="1"
+                          VerticalAlignment="Stretch"
+                          Background="{DynamicResource RftPerieFundalMeniuTop}"
+                          Width="5"
+                          ShowsPreview="True"
+                          HorizontalAlignment="Center">
+
+            </GridSplitter>
+
+            <ContentControl Content="{Binding RftVedereModelContinutActual}"
+                        Grid.Column="2">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinutPrincipal:RftVedereModelContinutPrincipala}">
+                        <rftVederiContinut:RftVedereContinutPrincipala/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutActivitatiSportive}">
+                        <rftVederiContinut:RftVedereContinutActivitatiSportive/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutAlimente}">
+                        <rftVederiContinut:RftVedereContinutAlimente/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutApa}">
+                        <rftVederiContinut:RftVedereContinutApa/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutCartiElectronice}">
+                        <rftVederiContinut:RftVedereContinutCartiElectronice/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutComun}">
+                        <rftVederiContinut:RftVedereContinutComun/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutCumparaturi}">
+                        <rftVederiContinut:RftVedereContinutCumparaturi/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutCurent}">
+                        <rftVederiContinut:RftVedereContinutCurent/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutDivertisment}">
+                        <rftVederiContinut:RftVedereContinutDivertisment/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutEducatie}">
+                        <rftVederiContinut:RftVedereContinutEducatie/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutElectronice}">
+                        <rftVederiContinut:RftVedereContinutElectronice/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutEvenimente}">
+                        <rftVederiContinut:RftVedereContinutEvenimente/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutFacturi}">
+                        <rftVederiContinut:RftVedereContinutFacturi/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutFilme}">
+                        <rftVederiContinut:RftVedereContinutFilme/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutImbracaminte}">
+                        <rftVederiContinut:RftVedereContinutImbracaminte/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutInvatamant}">
+                        <rftVederiContinut:RftVedereContinutInvatamant/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutJocuri}">
+                        <rftVederiContinut:RftVedereContinutJocuri/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutMedical}">
+                        <rftVederiContinut:RftVedereContinutMedical/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutMuzica}">
+                        <rftVederiContinut:RftVedereContinutMuzica/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutPersonal}">
+                        <rftVederiContinut:RftVedereContinutPersonal/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutSanatate}">
+                        <rftVederiContinut:RftVedereContinutSanatate/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutTelefonie}">
+                        <rftVederiContinut:RftVedereContinutTelefonie/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type rftVederiModeleContinut:RftVedereModelContinutTransport}">
+                        <rftVederiContinut:RftVedereContinutTransport/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,200 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="RftCuloareAutentificareFundalGeneral">#ffffff</Color>
+    <Color x:Key="RftCuloareAutentificarePrimPlanGeneral">#000000</Color>
+    <Color x:Key="RftCuloareAutentificareFundalSemi">#c9c9c9</Color>
+    <Color x:Key="RftCuloareAutentificareFundalSecundar">#7c7c7c</Color>
+
+    <SolidColorBrush x:Key="RftPerieAutentificareFundalGeneral" Color="{StaticResource RftCuloareAutentificareFundalGeneral}"/>
+    <SolidColorBrush x:Key="RftPerieAutentificarePrimPlanGeneral" Color="{StaticResource RftCuloareAutentificarePrimPlanGeneral}"/>
+    <SolidColorBrush x:Key="RftPerieAutentificareFundalSemi" Color="{StaticResource RftCuloareAutentificareFundalSemi}"/>
+    <SolidColorBrush x:Key="RftPerieAutentificareFundalSecundar" Color="{StaticResource RftCuloareAutentificareFundalSecundar}"/>
+
+    <Style x:Key="RftStilButonAutentificare"
+           TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="RftGranita"
+                            Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                            Cursor="Hand"
+                            Height="35"
+                            Width="200"
+                            VerticalAlignment="Center"
+                            BorderBrush="{StaticResource RftPerieAutentificareFundalSemi}"
+                            BorderThickness="10 0 0 0"
+                            Margin="0 0 0 0">
+                        <Border.RenderTransform>
+                            <SkewTransform AngleX="-25"/>
+                        </Border.RenderTransform>
+
+                        <DockPanel>
+                            <DockPanel.RenderTransform>
+                                <SkewTransform AngleX="25"/>
+                            </DockPanel.RenderTransform>
+
+                            <Image x:Name="RftImagine"
+                                   DockPanel.Dock="Left"
+                                   Width="15"
+                                   Height="15"
+                                   Margin="5 0 0 0"
+                                   Source="{StaticResource RftSursaImagineAutentificare}">
+                            </Image>
+
+                            <TextBlock x:Name="RftText"
+                                       DockPanel.Dock="Right"
+                                       FontSize="16"
+                                       Foreground="{StaticResource RftPerieAutentificareFundalGeneral}"
+                                       TextAlignment="Left"
+                                       Text="{TemplateBinding Content}"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0">
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsFocused"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="RftGranita">
+                                <Setter.Value>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{StaticResource RftCuloareAutentificareFundalSecundar}" Offset="0"/>
+                                        <GradientStop Color="{StaticResource RftCuloareAutentificarePrimPlanGeneral}" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RftStilButonContNou"
+           TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="RftGranita"
+                            Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                            Cursor="Hand"
+                            Height="35"
+                            Width="200"
+                            VerticalAlignment="Center"
+                            BorderBrush="{StaticResource RftPerieAutentificareFundalSemi}"
+                            BorderThickness="10 0 0 0"
+                            Margin="0 0 0 0">
+                        <Border.RenderTransform>
+                            <SkewTransform AngleX="-25"/>
+                        </Border.RenderTransform>
+
+                        <DockPanel>
+                            <DockPanel.RenderTransform>
+                                <SkewTransform AngleX="25"/>
+                            </DockPanel.RenderTransform>
+
+                            <Image x:Name="RftImagine"
+                                   DockPanel.Dock="Left"
+                                   Width="15"
+                                   Height="15"
+                                   Margin="5 0 0 0"
+                                   Source="{StaticResource RftSursaImagineContNou}">
+                            </Image>
+
+                            <TextBlock x:Name="RftText"
+                                       DockPanel.Dock="Right"
+                                       FontSize="16"
+                                       Foreground="{StaticResource RftPerieAutentificareFundalGeneral}"
+                                       TextAlignment="Left"
+                                       Text="{TemplateBinding Content}"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0">
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsFocused"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="RftGranita">
+                                <Setter.Value>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{StaticResource RftCuloareAutentificareFundalSecundar}" Offset="0"/>
+                                        <GradientStop Color="{StaticResource RftCuloareAutentificarePrimPlanGeneral}" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RftStilButonCreareContNou"
+           TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="RftGranita"
+                            Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                            Cursor="Hand"
+                            Height="35"
+                            Width="200"
+                            VerticalAlignment="Center"
+                            BorderBrush="{StaticResource RftPerieAutentificareFundalSemi}"
+                            BorderThickness="10 0 0 0"
+                            Margin="0 0 0 0">
+                        <Border.RenderTransform>
+                            <SkewTransform AngleX="-25"/>
+                        </Border.RenderTransform>
+
+                        <DockPanel>
+                            <DockPanel.RenderTransform>
+                                <SkewTransform AngleX="25"/>
+                            </DockPanel.RenderTransform>
+
+                            <Image x:Name="RftImagine"
+                                   DockPanel.Dock="Left"
+                                   Width="15"
+                                   Height="15"
+                                   Margin="5 0 0 0"
+                                   Source="{StaticResource RftSursaImagineCreare}">
+                            </Image>
+
+                            <TextBlock x:Name="RftText"
+                                       DockPanel.Dock="Right"
+                                       FontSize="16"
+                                       Foreground="{StaticResource RftPerieAutentificareFundalGeneral}"
+                                       TextAlignment="Left"
+                                       Text="{TemplateBinding Content}"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0">
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsFocused"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="RftGranita">
+                                <Setter.Value>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{StaticResource RftCuloareAutentificareFundalSecundar}" Offset="0"/>
+                                        <GradientStop Color="{StaticResource RftCuloareAutentificarePrimPlanGeneral}" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

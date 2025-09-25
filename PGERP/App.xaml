@@ -1,0 +1,21 @@
+﻿<Application x:Class="PGERP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PGERP">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/RftStiluri/RftGeneral/RftTemaCuloriGenerala.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftGeneral/RftTemaCuloriFereastraAutentificare.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftGeneral/RftTemaCuloriInchise.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftGeneral/RftTemaCuloriDeschise.xaml"/>
+
+                <ResourceDictionary Source="/RftStiluri/RftComponente/RftTemaCuloriMeniuTop.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftComponente/RftTemaCuloriMeniuStanga.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftComponente/RftTemaCuloriMeniuBottom.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftComponente/RftTemaCuloriComutatorMeniuStanga.xaml"/>
+                <ResourceDictionary Source="/RftStiluri/RftComponente/RftTemaCuloriGrilaContinut.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

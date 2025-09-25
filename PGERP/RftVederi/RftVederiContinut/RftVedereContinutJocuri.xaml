@@ -1,0 +1,293 @@
+﻿<UserControl x:Class="PGERP.RftVederi.RftVedereContinutJocuri"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PGERP.RftVederi"
+             xmlns:rftDiagrame="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=DotNetProjects.DataVisualization.Toolkit"
+             xmlns:rftComponentePersonalizate="clr-namespace:PGERPComponentePersonalizate;assembly=PGERPComponentePersonalizate"
+             mc:Ignorable="d" >
+    <DockPanel>
+        <Grid DockPanel.Dock="Top"
+              Height="35"
+              Background="{DynamicResource RftPerieFundalMeniuTop}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                      HorizontalAlignment="Left"
+                      Background="{DynamicResource RftPerieFundalMeniuTop}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar Grid.Column="0"
+                                                                                            ImageSource="{StaticResource RftSursaImagineRefresh}"
+                                                                                            Command="{Binding RftComandaReinitializareTabela}">
+                    <rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+                        <ToolTip Placement="MousePoint">
+                            <TextBlock Text="{Binding RftMesajReinitializareTabela}"/>
+                        </ToolTip>
+                    </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar.ToolTip>
+                </rftComponentePersonalizate:RftComponentaPersonalizataButonUtilitarSecundar>
+
+                <Menu x:Name="RftMeniuUtilizatorSecundar"
+                          Grid.Column="1"
+                          Margin="10 0 0 0"
+                          Style="{StaticResource RftStilMeniuSecundar}">
+                    <MenuItem Header="Export"
+                                  HorizontalAlignment="Center"
+                                  Icon="{StaticResource RftIcoanaExportFisier}"
+                                  Style="{StaticResource RftMeniuArticolTopSecundar}">
+                        <MenuItem Header="PDF"
+                                      Icon="{StaticResource RftIcoanaExportPDF}"
+                                      Command="{Binding RftComandaExportPDFContinutJocuri}"/>
+                        <MenuItem Header="Excel"
+                                      Icon="{StaticResource RftIcoanaExportExcel}"
+                                      Command="{Binding RftComandaExportExcelContinutJocuri}"/>
+                        <MenuItem Header="CSV"
+                                      Icon="{StaticResource RftIcoanaExportCSV}"
+                                      Command="{Binding RftComandaExportCSVContinutJocuri}"/>
+                    </MenuItem>
+                </Menu>
+
+                <Menu x:Name="RftMeniuUtilizatorSecundarIntervalNTimp"
+                          Grid.Column="2"
+                          Margin="25 0 0 0"
+                          Style="{StaticResource RftStilMeniuIntervalTimp}">
+                    <MenuItem Header="Interval N Timp"
+                                  HorizontalAlignment="Center"
+                                  Style="{StaticResource RftMeniuArticolIntervalTimp}">
+                        <MenuItem Header="24 ore"
+                                      Icon="{StaticResource RftIcoana24ore}"
+                                      Command="{Binding RftComandaIntervalTimp24ore}"/>
+                        <MenuItem Header="7 zile"
+                                      Icon="{StaticResource RftIcoana7zile}"
+                                      Command="{Binding RftComandaIntervalTimp7zile}"/>
+                        <MenuItem Header="1 luna"
+                                      Icon="{StaticResource RftIcoana1luna}"
+                                      Command="{Binding RftComandaIntervalTimp1luna}"/>
+                        <MenuItem Header="1 an"
+                                      Icon="{StaticResource RftIcoana1an}"
+                                      Command="{Binding RftComandaIntervalTimp1an}"/>
+                        <Separator/>
+                        <MenuItem Header="Sfertul 1"
+                                      Icon="{StaticResource RftIcoanaSfert1}"
+                                      Command="{Binding RftComandaIntervalTimpSfert1}"/>
+                        <MenuItem Header="Sfertul 2"
+                                      Icon="{StaticResource RftIcoanaSfert2}"
+                                      Command="{Binding RftComandaIntervalTimpSfert2}"/>
+                        <MenuItem Header="Sfertul 3"
+                                      Icon="{StaticResource RftIcoanaSfert3}"
+                                      Command="{Binding RftComandaIntervalTimpSfert3}"/>
+                        <MenuItem Header="Sfertul 4"
+                                      Icon="{StaticResource RftIcoanaSfert4}"
+                                      Command="{Binding RftComandaIntervalTimpSfert4}"/>
+                    </MenuItem>
+                </Menu>
+            </Grid>
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <rftDiagrame:Chart Grid.Row="0"
+                                   Title="{Binding RftGraficTitlu}"
+                                   Foreground="{DynamicResource RftPeriePrimPlanGeneral}">
+                <rftDiagrame:Chart.PlotAreaStyle>
+                    <Style TargetType="Grid">
+                        <Setter Property="Background"
+                            Value="{DynamicResource RftPerieFundalGeneral}"/>
+                    </Style>
+                </rftDiagrame:Chart.PlotAreaStyle>
+
+                <rftDiagrame:Chart.LegendStyle>
+                    <Style TargetType="Control">
+                        <Setter Property="Background"
+                            Value="{DynamicResource RftPerieFundalGeneral}"/>
+                        <Setter Property="Foreground"
+                            Value="{DynamicResource RftPeriePrimPlanGeneral}"/>
+                        <Setter Property="BorderThickness"
+                            Value="0"/>
+                    </Style>
+                </rftDiagrame:Chart.LegendStyle>
+
+                <rftDiagrame:Chart.Axes>
+                    <rftDiagrame:DateTimeAxis Orientation="X"
+                                                      Margin="0 0 100 0"
+                                                      Location="Bottom">
+                        <rftDiagrame:DateTimeAxis.AxisLabelStyle>
+                            <Style TargetType="rftDiagrame:DateTimeAxisLabel">
+                                <Setter Property="StringFormat" 
+                                                Value="{}{0:MM/dd/yyyy}"/>
+                                <Setter Property="FontSize"
+                                                Value="12"/>
+                                <Setter Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-80"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Foreground"
+                                                Value="{DynamicResource RftPeriePrimPlanGeneral}"/>
+                            </Style>
+                        </rftDiagrame:DateTimeAxis.AxisLabelStyle>
+                    </rftDiagrame:DateTimeAxis>
+                    <rftDiagrame:LinearAxis Orientation="Y"
+                                                    Maximum="{Binding RftBuget}"
+                                                    Minimum="0">
+                        <rftDiagrame:LinearAxis.AxisLabelStyle>
+                            <Style TargetType="Control">
+                                <Setter Property="FontSize"
+                                                Value="12"/>
+                                <Setter Property="Foreground"
+                                                Value="{DynamicResource RftPeriePrimPlanGeneral}"/>
+                            </Style>
+                        </rftDiagrame:LinearAxis.AxisLabelStyle>
+                    </rftDiagrame:LinearAxis>
+                </rftDiagrame:Chart.Axes>
+
+                <rftDiagrame:Chart.Series>
+                    <rftDiagrame:AreaSeries ItemsSource="{Binding RftLinieJocuri}"
+                                            DependentValuePath="Pret"
+                                            IndependentValuePath="Data"
+                                            Title="Jocuri">
+                    </rftDiagrame:AreaSeries>
+                </rftDiagrame:Chart.Series>
+            </rftDiagrame:Chart>
+
+            <GridSplitter Grid.Row="1"
+                          HorizontalAlignment="Stretch"
+                          Background="{DynamicResource RftPerieFundalMeniuTop}"
+                          Height="5"
+                          ShowsPreview="True"
+                          VerticalAlignment="Center">
+
+            </GridSplitter>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"
+                  Background="{DynamicResource RftPerieFundalMeniuTop}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"
+                            BorderThickness="10 0 0 0"
+                            Margin="15 0 0 0"
+                            Height="30"
+                            BorderBrush="{StaticResource RftPerieAutentificareFundalSecundar}"
+                            Background="{StaticResource RftPerieAutentificareFundalSecundar}">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <SkewTransform AngleX="-25"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Border.Style>
+
+                        <Label Content="Filtru Tranzactie"
+                               Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                               Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Margin="-15 0 0 0"
+                               FontFamily="Verdana">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="RenderTransform">
+                                        <Setter.Value>
+                                            <SkewTransform AngleX="25"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                    </Border>
+
+                    <TextBox x:Name="RftCasetaFiltruTranzactii"
+                             Grid.Column="1"
+                             Height="30"
+                             FontSize="16"
+                             VerticalContentAlignment="Center"
+                             BorderThickness="1"
+                             Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+                             Foreground="{StaticResource RftPerieFundalConstatntaDeschisa}"
+                             Text="{Binding RftFiltruTranzactii, UpdateSourceTrigger=PropertyChanged}"
+                             TextAlignment="Center"
+                             VerticalAlignment="Center"
+                             Margin="0">
+                    </TextBox>
+                </Grid>
+
+                <ScrollViewer Background="Transparent"
+                          Grid.Row="1">
+                    <ScrollViewer.Resources>
+                        <Style TargetType="ScrollBar">
+                            <Setter Property="Background"
+                            Value="Transparent"/>
+                            <Setter Property="Foreground"
+                            Value="{DynamicResource RftPerieAutentificarePrimPlanGeneral}"/>
+                        </Style>
+                    </ScrollViewer.Resources>
+
+                    <DataGrid x:Name="RftTabelaDate"
+                              IsReadOnly="True"
+                              GridLinesVisibility="None"
+                              Background="{DynamicResource RftPerieFundalGeneral}"
+                              VerticalAlignment="Stretch"
+                              AutoGenerateColumns="False"
+                              ItemsSource="{Binding RftTranzactiiFiltrate}"
+                          SelectionMode="Single"
+                          HeadersVisibility="Column">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Categorie"
+                                                Binding="{Binding Categorie}" />
+                            <DataGridTextColumn Header="Subcategorie"
+                                                Binding="{Binding SubCategorie}" />
+                            <DataGridTextColumn Header="Data" 
+                                                Binding="{Binding Data}" />
+                            <DataGridTextColumn Header="Pret" 
+                                                Binding="{Binding Pret}" />
+                            <DataGridTextColumn Header="Cantitate" 
+                                                Binding="{Binding Cantitate}" />
+                            <DataGridTextColumn Header="Tranzactie"
+                                                Binding="{Binding Tranzactie}" />
+                            <DataGridTextColumn Header="Firma Producatoare"
+                                                Binding="{Binding FirmaProducatoare}" />
+                            <DataGridTextColumn Header="Denumire Magazin"
+                                                Binding="{Binding DenumireMagazin}" />
+                            <DataGridTextColumn Header="Adresa Web"
+                                                Binding="{Binding AdresaPaginaInternet}" />
+                            <DataGridTextColumn Header="Metoda Plata"
+                                                Binding="{Binding MetodaPlata}" />
+                            <DataGridTextColumn Header="Institutia Financiara"
+                                                Binding="{Binding InstitutiaFinanciara}" />
+                            <DataGridTextColumn Header="Locatie Documente" 
+                                                Binding="{Binding LocatieDocumente}" />
+                            <DataGridTextColumn Header="Notite" 
+                                                Binding="{Binding Notite}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</UserControl>

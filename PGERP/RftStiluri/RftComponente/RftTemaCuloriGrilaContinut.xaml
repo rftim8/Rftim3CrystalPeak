@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="RftStilGrilaContinut"
+           TargetType="Grid">
+
+        <Setter Property="Margin"
+                Value="50 20 20 20"/>
+
+        <Setter Property="Background"
+                Value="{DynamicResource RftPerieFundalGeneral}"/>
+
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="20"
+                                      Color="{DynamicResource RftCuloarePrimPlanGeneral}"
+                                      Direction="0"
+                                      Opacity="0.3"
+                                      ShadowDepth="0"/>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Background"
+                Value="{DynamicResource RftPerieFundalGeneral}"/>
+        <Setter Property="Foreground"
+                Value="{DynamicResource RftPeriePrimPlanGeneral}"/>
+        <Setter Property="FontSize"
+                Value="14"/>
+        <Setter Property="FontFamily"
+                Value="Verdana"/>
+        <Setter Property="Margin"
+                Value="0 10 0 10"/>
+        <Setter Property="BorderThickness"
+                Value="20 0 20 0"/>
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource RftPerieFundalGeneral}"/>
+    </Style>
+
+    <Style TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background"
+                Value="{DynamicResource RftPerieFundalGeneral}"/>
+        <Setter Property="Foreground"
+                Value="{DynamicResource RftPeriePrimPlanGeneral}"/>
+        <Setter Property="FontFamily"
+                Value="Verdana"/>
+        <Setter Property="FontSize"
+                Value="12"/>
+        <Setter Property="Margin"
+                Value="0 5 0 5"/>
+    </Style>
+
+    <Style TargetType="DataGridCell">
+        <Setter Property="Cursor"
+                Value="Hand"/>
+        <Setter Property="BorderThickness"
+                Value="20 0 20 0"/>
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource RftPerieFundalGeneral}"/>
+    </Style>
+</ResourceDictionary>

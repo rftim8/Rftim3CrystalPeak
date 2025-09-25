@@ -1,0 +1,79 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="RftCuloareFundalEroare">#ff3333</Color>
+    <Color x:Key="RftCuloareFundalSucces">#005c18</Color>
+
+    <SolidColorBrush x:Key="RftPerieFundalEroare" Color="{StaticResource RftCuloareFundalEroare}"/>
+    <SolidColorBrush x:Key="RftPerieFundalSucces" Color="{StaticResource RftCuloareFundalSucces}"/>
+
+    <Image x:Key="RftIcoanaAutentificare" Source="/RftResurse/RftAutentificare_16x.png"/>
+    <Image x:Key="RftIcoanaDocumentatie" Source="/RftResurse/RftDocumentatie_16x.png"/>
+    <Image x:Key="RftIcoanaCont" Source="/RftResurse/RftContNou_16x.png"/>
+    <Image x:Key="RftIcoanaLocatii" Source="/RftResurse/RftLocatieDocumente_16x.png"/>
+    <Image x:Key="RftIcoanaExportFisier" Source="/RftResurse/RftExport_16x.png"/>
+    <Image x:Key="RftIcoanaExportPDF" Source="/RftResurse/RftPDF.png"/>
+    <Image x:Key="RftIcoanaExportExcel" Source="/RftResurse/RftExcel_16x.png"/>
+    <Image x:Key="RftIcoanaExportCSV" Source="/RftResurse/RftCSV_16x.png"/>
+    <Image x:Key="RftIcoanaTop5" Source="/RftResurse/RftTop5.png"/>
+    <Image x:Key="RftIcoanaTop15" Source="/RftResurse/RftTop15.png"/>
+    <Image x:Key="RftIcoanaTop30" Source="/RftResurse/RftTop30.png"/>
+    <Image x:Key="RftIcoanaStergereRand" Source="/RftResurse/RftStergereRand_16x.png"/>
+    <Image x:Key="RftIcoanaModificareRand" Source="/RftResurse/RftModificareRand_16x.png"/>
+    <Image x:Key="RftIcoanaRefresh" Source="/RftResurse/RftRefresh_16x.png"/>
+
+    <Image x:Key="RftIcoana24ore" Source="/RftResurse/Rft24ore.png"/>
+    <Image x:Key="RftIcoana7zile" Source="/RftResurse/Rft7zile.png"/>
+    <Image x:Key="RftIcoana1luna" Source="/RftResurse/Rft31zile.png"/>
+    <Image x:Key="RftIcoana1an" Source="/RftResurse/Rft1an.png"/>
+    <Image x:Key="RftIcoanaSfert1" Source="/RftResurse/RftSfert1.png"/>
+    <Image x:Key="RftIcoanaSfert2" Source="/RftResurse/RftSfert2.png"/>
+    <Image x:Key="RftIcoanaSfert3" Source="/RftResurse/RftSfert3.png"/>
+    <Image x:Key="RftIcoanaSfert4" Source="/RftResurse/RftSfert4.png"/>
+
+    <ImageSource x:Key="RftSursaImagineDocumentatie">/RftResurse/RftDocumentatie_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineAutentificare">/RftResurse/RftAutentificare_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineAutentificareUtilizator">/RftResurse/RftUtilizator_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineParola">/RftResurse/RftParola_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineContNou">/RftResurse/RftContNou_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineEmail">/RftResurse/RftEmail_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineCreare">/RftResurse/RftCreare_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineUtilizator" >/RftResurse/RftPGERP.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineMinimizareFereastra" >/RftResurse/RftMinimizareFereastra_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineMaximizareFereastra" >/RftResurse/RftMaximizareFereastra_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineIesireProgram" >/RftResurse/RftIesireProgram_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineSetari">/RftResurse/RftSetari_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineAlimente">/RftResurse/RftAlimente.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineImbracaminte">/RftResurse/RftImbracaminte.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineElectronice">/RftResurse/RftElectronice_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineFilme">/RftResurse/RftFilme_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineMuzica">/RftResurse/RftMuzica_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineJocuri">/RftResurse/RftJocuri.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineCartiElectronice">/RftResurse/RftCartiElectronice.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineEvenimente">/RftResurse/RftEvenimente.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineApa">/RftResurse/RftApa.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineCurent">/RftResurse/RftCurent.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineTelefonie">/RftResurse/RftTelefonie.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineActivitatiSportive">/RftResurse/RftActivitatiSportive.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineMedical">/RftResurse/RftMedical.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineTransportPersonal">/RftResurse/RftTransportPersonal.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineTransportComun">/RftResurse/RftTransportComun.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineExportExcel">/RftResurse/RftExcel_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineExportCSV">/RftResurse/RftCSV_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineExportImagine">/RftResurse/RftImagine_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineExportPDF">/RftResurse/RftPDF.png</ImageSource>
+    <ImageSource x:Key="RftSursaServiciuActiv">/RftResurse/RftServiciuActiv_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaServiciuInactiv">/RftResurse/RftServiciuInactiv_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineRefresh">/RftResurse/RftRefresh_16x.png</ImageSource>
+
+    <ImageSource x:Key="RftSursaImagineTimp">/RftResurse/RftTimp_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineTranzactie">/RftResurse/RftTranzactie_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineLocatie">/RftResurse/RftLocatie_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineInstitutie">/RftResurse/RftInstitutie_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineLocatieDocumente">/RftResurse/RftLocatieDocumente_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineMetodaPlata">/RftResurse/RftMetodaPlata_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineNotite">/RftResurse/RftNotite_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineModificareRand">/RftResurse/RftModificareRand_16x.png</ImageSource>
+    <ImageSource x:Key="RftSursaImagineInapoi">/RftResurse/RftInapoi_16x.png</ImageSource>
+
+</ResourceDictionary>

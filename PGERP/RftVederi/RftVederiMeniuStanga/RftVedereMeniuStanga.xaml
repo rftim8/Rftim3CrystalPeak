@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="PGERP.RftVederi.RftVedereMeniuStanga"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PGERP.RftVederi"
+             xmlns:rftVederi="clr-namespace:PGERP.RftVederi"
+             xmlns:rftVederiModeleMeniuStanga="clr-namespace:PGERP.RftVederiModele.RftVederiModeleMeniuStanga"
+             xmlns:rftVederiModeleMeniuStangaPrincipala="clr-namespace:PGERP.RftVederiModele"
+             mc:Ignorable="d" >
+    <Grid>
+        <ContentControl Content="{Binding RftVedereModelMeniuStangaCurent}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStangaPrincipala:RftVedereModelMeniuStangaPrincipala}">
+                    <rftVederi:RftVedereMeniuStangaPrincipala/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStangaCumparaturi}">
+                    <rftVederi:RftVedereMeniuStangaCumparaturi/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStangaDivertisment}">
+                    <rftVederi:RftVedereMeniuStangaDivertisment/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStangaEducatie}">
+                    <rftVederi:RftVedereMeniuStangaEducatie/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStangaFacturi}">
+                    <rftVederi:RftVedereMeniuStangaFacturi/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStangaSanatate}">
+                    <rftVederi:RftVedereMeniuStangaSanatate/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModeleMeniuStanga:RftVedereModelMeniuStangaTransport}">
+                    <rftVederi:RftVedereMeniuStangaTransport/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+    </Grid>
+</UserControl>

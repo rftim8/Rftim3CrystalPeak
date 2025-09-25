@@ -1,0 +1,221 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>RftResurse\RftPGERP.ico</ApplicationIcon>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>$(VersionPrefix)1.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="RftResurse\Rft1an.png" />
+    <None Remove="RftResurse\Rft24ore.png" />
+    <None Remove="RftResurse\Rft31zile.png" />
+    <None Remove="RftResurse\Rft7zile.png" />
+    <None Remove="RftResurse\RftActivitatiSportive.png" />
+    <None Remove="RftResurse\RftAlimente.png" />
+    <None Remove="RftResurse\RftApa.png" />
+    <None Remove="RftResurse\RftAutentificare_16x.png" />
+    <None Remove="RftResurse\RftCartiElectronice.png" />
+    <None Remove="RftResurse\RftComutatorMeniuStangaCuloriDeschise_48x.png" />
+    <None Remove="RftResurse\RftComutatorMeniuStangaCuloriInchise_48x.png" />
+    <None Remove="RftResurse\RftContNou_16x.png" />
+    <None Remove="RftResurse\RftCreare_16x.png" />
+    <None Remove="RftResurse\RftCSV_16x.png" />
+    <None Remove="RftResurse\RftCumparaturi_32x.png" />
+    <None Remove="RftResurse\RftCurent.png" />
+    <None Remove="RftResurse\RftDeconectare_16x.png" />
+    <None Remove="RftResurse\RftDivertisment_16x.png" />
+    <None Remove="RftResurse\RftDocumentatie_16x.png" />
+    <None Remove="RftResurse\RftEducatie_16x.png" />
+    <None Remove="RftResurse\RftElectronice_16x.png" />
+    <None Remove="RftResurse\RftEmail_16x.png" />
+    <None Remove="RftResurse\RftEvenimente.png" />
+    <None Remove="RftResurse\RftExcel_16x.png" />
+    <None Remove="RftResurse\RftExport_16x.png" />
+    <None Remove="RftResurse\RftFacturi_16x.png" />
+    <None Remove="RftResurse\RftFilme_16x.png" />
+    <None Remove="RftResurse\RftIesireProgram_16x.png" />
+    <None Remove="RftResurse\RftImagine_16x.png" />
+    <None Remove="RftResurse\RftImbracaminte.png" />
+    <None Remove="RftResurse\RftInapoi_16x.png" />
+    <None Remove="RftResurse\RftInstitutie_16x.png" />
+    <None Remove="RftResurse\RftJocuri.png" />
+    <None Remove="RftResurse\RftLocatieDocumente_16x.png" />
+    <None Remove="RftResurse\RftLocatie_16x.png" />
+    <None Remove="RftResurse\RftMaximizareFereastra_16x.png" />
+    <None Remove="RftResurse\RftMedical.png" />
+    <None Remove="RftResurse\RftMetodaPlata_16x.png" />
+    <None Remove="RftResurse\RftMinimizareFereastra_16x.png" />
+    <None Remove="RftResurse\RftModificareRand_16x.png" />
+    <None Remove="RftResurse\RftMuzica_16x.png" />
+    <None Remove="RftResurse\RftNotite_16x.png" />
+    <None Remove="RftResurse\RftParola_16x.png" />
+    <None Remove="RftResurse\RftPDF.png" />
+    <None Remove="RftResurse\RftPGERP.ico" />
+    <None Remove="RftResurse\RftPGERP.png" />
+    <None Remove="RftResurse\RftRefresh_16x.png" />
+    <None Remove="RftResurse\RftSanatate_16x.png" />
+    <None Remove="RftResurse\RftServiciuActiv_16x.png" />
+    <None Remove="RftResurse\RftServiciuInactiv_16x.png" />
+    <None Remove="RftResurse\RftSetari_16x.png" />
+    <None Remove="RftResurse\RftSfert1.png" />
+    <None Remove="RftResurse\RftSfert2.png" />
+    <None Remove="RftResurse\RftSfert3.png" />
+    <None Remove="RftResurse\RftSfert4.png" />
+    <None Remove="RftResurse\RftStergereRand_16x.png" />
+    <None Remove="RftResurse\RftTelefonie.png" />
+    <None Remove="RftResurse\RftTemaCuloriDeschise_16x.png" />
+    <None Remove="RftResurse\RftTemaCuloriInchise_16x.png" />
+    <None Remove="RftResurse\RftTimp_16x.png" />
+    <None Remove="RftResurse\RftTop15.png" />
+    <None Remove="RftResurse\RftTop30.png" />
+    <None Remove="RftResurse\RftTop5.png" />
+    <None Remove="RftResurse\RftTransportComun.png" />
+    <None Remove="RftResurse\RftTransportPersonal.png" />
+    <None Remove="RftResurse\RftTransport_32x.png" />
+    <None Remove="RftResurse\RftTranzactie_16x.png" />
+    <None Remove="RftResurse\RftUtilizator_16x.png" />
+    <None Remove="RftSQLite\PGERP.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="RftResurse\RftPGERP.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="RftResurse\Rft1an.png" />
+    <Resource Include="RftResurse\Rft24ore.png" />
+    <Resource Include="RftResurse\Rft31zile.png" />
+    <Resource Include="RftResurse\Rft7zile.png" />
+    <Resource Include="RftResurse\RftInapoi_16x.png" />
+    <Resource Include="RftResurse\RftInstitutie_16x.png" />
+    <Resource Include="RftResurse\RftLocatieDocumente_16x.png" />
+    <Resource Include="RftResurse\RftLocatie_16x.png" />
+    <Resource Include="RftResurse\RftMetodaPlata_16x.png" />
+    <Resource Include="RftResurse\RftModificareRand_16x.png" />
+    <Resource Include="RftResurse\RftNotite_16x.png" />
+    <Resource Include="RftResurse\RftRefresh_16x.png" />
+    <Resource Include="RftResurse\RftServiciuActiv_16x.png" />
+    <Resource Include="RftResurse\RftServiciuInactiv_16x.png" />
+    <Resource Include="RftResurse\RftSfert1.png" />
+    <Resource Include="RftResurse\RftSfert2.png" />
+    <Resource Include="RftResurse\RftSfert3.png" />
+    <Resource Include="RftResurse\RftSfert4.png" />
+    <Resource Include="RftResurse\RftStergereRand_16x.png" />
+    <Resource Include="RftResurse\RftTimp_16x.png" />
+    <Resource Include="RftResurse\RftTop15.png" />
+    <Resource Include="RftResurse\RftTop30.png" />
+    <Resource Include="RftResurse\RftTop5.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="RftResurse\RftCSV_16x.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="RftResurse\RftActivitatiSportive.png" />
+    <Resource Include="RftResurse\RftAlimente.png" />
+    <Resource Include="RftResurse\RftApa.png" />
+    <Resource Include="RftResurse\RftAutentificare_16x.png" />
+    <Resource Include="RftResurse\RftCartiElectronice.png" />
+    <Resource Include="RftResurse\RftComutatorMeniuStangaCuloriDeschise_48x.png" />
+    <Resource Include="RftResurse\RftComutatorMeniuStangaCuloriInchise_48x.png" />
+    <Resource Include="RftResurse\RftContNou_16x.png" />
+    <Resource Include="RftResurse\RftCreare_16x.png" />
+    <Resource Include="RftResurse\RftCumparaturi_32x.png" />
+    <Resource Include="RftResurse\RftCurent.png" />
+    <Resource Include="RftResurse\RftDeconectare_16x.png" />
+    <Resource Include="RftResurse\RftDivertisment_16x.png" />
+    <Resource Include="RftResurse\RftDocumentatie_16x.png" />
+    <Resource Include="RftResurse\RftEducatie_16x.png" />
+    <Resource Include="RftResurse\RftElectronice_16x.png" />
+    <Resource Include="RftResurse\RftEmail_16x.png" />
+    <Resource Include="RftResurse\RftEvenimente.png" />
+    <Resource Include="RftResurse\RftExcel_16x.png" />
+    <Resource Include="RftResurse\RftExport_16x.png" />
+    <Resource Include="RftResurse\RftFacturi_16x.png" />
+    <Resource Include="RftResurse\RftFilme_16x.png" />
+    <Resource Include="RftResurse\RftImagine_16x.png" />
+    <Resource Include="RftResurse\RftImbracaminte.png" />
+    <Resource Include="RftResurse\RftJocuri.png" />
+    <Resource Include="RftResurse\RftMedical.png" />
+    <Resource Include="RftResurse\RftMuzica_16x.png" />
+    <Resource Include="RftResurse\RftParola_16x.png" />
+    <Resource Include="RftResurse\RftPDF.png" />
+    <Resource Include="RftResurse\RftPGERP.ico" />
+    <Resource Include="RftResurse\RftPGERP.png" />
+    <Resource Include="RftResurse\RftSanatate_16x.png" />
+    <Resource Include="RftResurse\RftSetari_16x.png" />
+    <Resource Include="RftResurse\RftTelefonie.png" />
+    <Resource Include="RftResurse\RftTemaCuloriDeschise_16x.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetProjects.WpfToolkit.DataVisualization" Version="6.1.94" />
+    <PackageReference Include="itext7" Version="9.3.0" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Maps.MapControl.WPF" Version="1.0.0.3" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PGERPBiblioteca\PGERPBiblioteca.csproj" />
+    <ProjectReference Include="..\PGERPComponentePersonalizate\PGERPComponentePersonalizate.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="RftResurse\RftIesireProgram_16x.png" />
+    <Resource Include="RftResurse\RftMaximizareFereastra_16x.png" />
+    <Resource Include="RftResurse\RftMinimizareFereastra_16x.png" />
+    <Resource Include="RftResurse\RftTemaCuloriInchise_16x.png" />
+    <Resource Include="RftResurse\RftTransportComun.png" />
+    <Resource Include="RftResurse\RftTransportPersonal.png" />
+    <Resource Include="RftResurse\RftTransport_32x.png" />
+    <Resource Include="RftResurse\RftTranzactie_16x.png" />
+    <Resource Include="RftResurse\RftUtilizator_16x.png" />
+    <EmbeddedResource Include="RftSQLite\PGERP.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

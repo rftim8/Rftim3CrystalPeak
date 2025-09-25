@@ -1,0 +1,95 @@
+﻿<Window x:Class="PGERP.RftVederi.RftFereastraAutentificare"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PGERP.RftVederi"
+        xmlns:rftVederi="clr-namespace:PGERP.RftVederi.RftVederiAutentificare"
+        xmlns:rftVederiModele="clr-namespace:PGERP.RftVederiModele.RftVederiModeleAutentificare"
+        mc:Ignorable="d"
+        Title="RftFereastraAutentificare"
+        Height="550" 
+        Width="900"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Background="{StaticResource RftPerieAutentificareFundalSecundar}"
+        Foreground="{StaticResource RftPerieAutentificareFundalGeneral}">
+
+    <Window.Clip>
+        <PathGeometry>
+            <PathGeometry.Figures>
+                <PathFigure StartPoint="50,0">
+                    <PathFigure.Segments>
+                        <LineSegment Point="850,0"/>
+                        <LineSegment Point="900,50"/>
+                        <LineSegment Point="900,500"/>
+                        <LineSegment Point="850, 550"/>
+                        <LineSegment Point="50, 550"/>
+                        <LineSegment Point="0, 500"/>
+                        <LineSegment Point="0, 50"/>
+                    </PathFigure.Segments>
+                </PathFigure>
+            </PathGeometry.Figures>
+        </PathGeometry>
+    </Window.Clip>
+
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="20"
+                          Color="{StaticResource RftCuloareAutentificareFundalGeneral}"
+                          Opacity="0.3"
+                          Direction="0"
+                          ShadowDepth="0"/>
+    </Window.Effect>
+
+    <Grid Width="850"
+          Height="500" >
+
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="{StaticResource RftCuloareAutentificareFundalGeneral}" Offset="0"/>
+                <GradientStop Color="{StaticResource RftCuloareAutentificarePrimPlanGeneral}" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.Clip>
+            <PathGeometry>
+                <PathGeometry.Figures>
+                    <PathFigure StartPoint="50,0">
+                        <PathFigure.Segments>
+                            <LineSegment Point="800,0"/>
+                            <LineSegment Point="850,50"/>
+                            <LineSegment Point="850,450"/>
+                            <LineSegment Point="800, 500"/>
+                            <LineSegment Point="50, 500"/>
+                            <LineSegment Point="0, 450"/>
+                            <LineSegment Point="0, 50"/>
+                        </PathFigure.Segments>
+                    </PathFigure>
+                </PathGeometry.Figures>
+            </PathGeometry>
+        </Grid.Clip>
+
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="20"
+                              Color="{StaticResource RftCuloareAutentificareFundalSecundar}"
+                              Opacity="0.3"
+                              Direction="0"
+                              ShadowDepth="0"/>
+        </Grid.Effect>
+        
+        <ContentControl Content="{Binding RftVedereModelAutentificareCurent}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type rftVederiModele:RftVedereModelAutentificarePrincipal}">
+                    <rftVederi:RftVedereAutentificarePrincipal/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type rftVederiModele:RftVedereModelAutentificareContNou}">
+                    <rftVederi:RftVedereAutentificareContNou/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+    </Grid>
+</Window>
